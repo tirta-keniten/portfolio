@@ -1,0 +1,91 @@
+footer {
+  @apply py-4 text-gray-100 bg-gray-900;
+}
+
+.hero {
+  @apply max-w-5xl mx-auto py-10;
+
+  h1 {
+    @apply text-4xl;
+  }
+
+  .about-location {
+    @apply text-xl;
+  }
+
+  .about {
+    @apply text-xl text-gray-600;
+  }
+}
+
+.section {
+  @apply max-w-5xl mx-auto py-10 text-xl;
+
+  h1 {
+    @apply text-3xl mb-3;
+  }
+
+  h2 {
+    @apply text-3xl mb-3;
+  }
+
+  p {
+    @apply mb-2;
+  }
+
+  a:not(.btn) {
+    @apply text-blue-600;
+
+    &:hover,
+    &:focus,
+    &:active {
+      @apply underline;
+    }
+  }
+}
+
+.wa-img {
+  @apply h-5 inline;
+}
+
+@screen md {
+  .hero {
+    @apply max-w-5xl mx-auto py-16;
+
+    h1 {
+      @apply text-6xl;
+    }
+
+    .about-location {
+      @apply text-2xl;
+    }
+
+    .about {
+      @apply text-2xl text-gray-600;
+    }
+  }
+
+  .section {
+    @apply max-w-5xl mx-auto py-16 text-xl;
+
+    h1 {
+      @apply text-5xl;
+    }
+
+    h2 {
+      @apply text-4xl mb-3;
+    }
+  }
+}
+
+.btn {
+  @apply py-2 px-4 rounded text-white;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+
+  &:hover, &:active, &:focus {
+    @apply bg-blue-700;
+  }
+}
