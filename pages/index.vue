@@ -1,18 +1,22 @@
 <template>
   <div class="container mx-auto">
-    <section class="hero">
+    <section class="hero text-left md:text-center">
+      <div class="who-i-am md:text-3xl xl:text-5xl">
+        <span>I made </span><WhoIAm></WhoIAm>
+      </div>
       <h1>
         Tirta Keniten
       </h1>
       <p class="about-location">
-        Full-stack Web Developer - Bali, Indonesia.
+        Full-stack Web Developer
+        <span class="whitespace-no-wrap">- Bali, Indonesia</span>.
       </p>
-      <p class="about">
-        I use code to solve problems.
+      <p class="md:hidden my-2 text-gray-700">
+        I made {{ identity.join(', ') }}.
       </p>
     </section>
     <section class="section">
-      <h2>Programming Skills</h2>
+      <h2>Web Development Skills</h2>
 
       <div
         class="grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-4 lg:grid-cols-10 sm:gap-6"
@@ -70,9 +74,34 @@ export default {
     portfolios() {
       const all = this.$store.state.portfolio.all
       return all
+    },
+
+    skillListComma() {
+      const all = this.$store.state.skill.all
+      const skillsNames = all.map((item) => item.name)
+      return skillsNames.join(', ')
+    },
+
+    identity() {
+      return this.$store.state.identity.all
     }
   },
 
-  layout: 'default'
+  layout: 'default',
+
+  head() {
+    return {
+      title: 'Tirta Keniten - Bali Web Design & Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            "I'm a web designer & developer from Bali, Indonesia. I leverage website to solved other people's problems. I use " +
+            this.skillListComma
+        }
+      ]
+    }
+  }
 }
 </script>

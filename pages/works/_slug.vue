@@ -47,6 +47,20 @@ export default {
         return item.slug === slug
       })
     }
+  },
+
+  head() {
+    return {
+      title:
+        this.portfolio.title + ' Tirta Keniten - Bali Web Design & Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.portfolio.goal} This app uses technology: ${this.portfolio.technology}.`
+        }
+      ]
+    }
   }
 }
 </script>

@@ -28,7 +28,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/global-component-loader.js'],
+  plugins: ['~/plugins/global-component-loader.js', '~/plugins/vue-typer.js'],
   /*
    ** Nuxt.js dev-modules
    */

@@ -29,7 +29,9 @@
       </section>
     </div>
     <footer>
-      <p class="text-center">&copy; 2020 - Lazodevo. All right reserved.</p>
+      <p class="text-center">
+        &copy; 2020 - Tirta Keniten. All right reserved.
+      </p>
     </footer>
   </div>
 </template>
