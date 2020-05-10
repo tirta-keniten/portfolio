@@ -1,7 +1,7 @@
 <template>
   <div>
-    <nuxt />
-    <div class="container mx-auto">
+    <nuxt class="wrapper" />
+    <div class="container mx-auto wrapper">
       <section class="container section">
         <h2>Contact</h2>
         <p>
@@ -15,9 +15,12 @@
         </p>
         <p>
           Phone:
-          <a :href="`tel:${myphone}`" target="_blank" title="Click to call me">{{
-            myphone
-          }}</a>
+          <a
+            :href="`tel:${myphone}`"
+            target="_blank"
+            title="Click to call me"
+            >{{ myphone }}</a
+          >
           or
           <a :href="whatsappLink" title="Click to WhatsApp me" target="_blank">
             <img src="/skill-logo/whatsapp.svg" class="wa-img" />

@@ -15,7 +15,7 @@
       <h2>Programming Skills</h2>
 
       <div
-        class="grid grid-cols-2 gap-4 sm:grid-cols-6 sm:gap-4 lg:grid-cols-10 sm:gap-6"
+        class="grid grid-cols-4 gap-4 sm:grid-cols-8 sm:gap-4 lg:grid-cols-10 sm:gap-6"
       >
         <div
           v-for="(skill, id) in skills"

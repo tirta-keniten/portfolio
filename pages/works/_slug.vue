@@ -14,7 +14,7 @@
         {{ portfolio.technology }}
       </p>
 
-      <div class="my-4">
+      <div v-if="portfolio.url !== ''" class="my-4">
         <a
           :href="portfolio.url"
           class="btn btn-blue inline-block"
@@ -25,7 +25,10 @@
     </section>
     <section class="section">
       <p>
-        <a href="/works">Back to my works</a> | <a href="/">Back to homepage</a>
+        <a href="/works">Back to my works</a>
+      </p>
+      <p>
+        <a href="/">Back to homepage</a>
       </p>
     </section>
   </div>
