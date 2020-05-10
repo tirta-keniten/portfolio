@@ -145,6 +145,7 @@ footer {
     &.typed {
       /* Styles specific to typed characters
          i.e. characters to the left of the caret */
+      color: #efefef;
     }
     &.selected {
       /* Styles specific to selected characters
