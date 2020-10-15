@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <section class="hero text-left md:text-center">
+    <section class="hero min-80vh text-left md:text-center">
       <div class="who-i-am md:text-3xl xl:text-5xl">
         <span>I made </span><WhoIAm></WhoIAm>
       </div>
@@ -31,7 +31,7 @@
       </div>
     </section>
     <section class="section">
-      <h2>My Works</h2>
+      <h2>Some of My Works</h2>
 
       <div
         class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10"
@@ -51,12 +51,16 @@
         building things that solve problems.
       </p>
       <p>
-        Currently, I am a web developer at Astadala Hospitality. Leverage
+        Currently, I am working iHub Solutions International as Lead Developer Team.
+        My team build medium-large scale web applications, mobile apps, and marketing tools.
+      </p>
+      <p>
+        I was a web developer at Astadala Hospitality. Leverage
         technology to optimize business flow, increase efiency, and generate
         revenue by developing web-based applications.
       </p>
       <p>
-        In my spare time, I helps small business to get online, so they can
+        In my spare time, I helps small businesses to get online, so they can
         compete with bigger company and deliver better products and services.
       </p>
     </section>

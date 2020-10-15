@@ -2,6 +2,14 @@ export const state = () => {
   return {
     all: [
       {
+        title: 'Sangkala Creative',
+        slug: 'sangkala-creative',
+        technology: 'Laravel, VueJS, SASS, Tailwind CSS',
+        goal: 'To provide stunning display for products and services that offered by Sangkala Creative.',
+        url: 'https://sangkalacreative.com/',
+        image: '/img-portfolio/sangkala.png'
+      },
+      {
         title: 'Fytation',
         slug: 'fytation',
         technology: 'Laravel, VueJS, MySQL, SASS',

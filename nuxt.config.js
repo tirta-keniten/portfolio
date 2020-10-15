@@ -12,7 +12,7 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          '10 year of experience in web development. Focus on Laravel PHP, Vue JS, MySQL, and Containerized Applications.'
+          '10 year of experience in web development. Focus on Laravel PHP, VueJS, MySQL, and Containerized Applications.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]

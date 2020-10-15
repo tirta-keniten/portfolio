@@ -2,7 +2,7 @@
   <div class="container">
     <section class="hero">
       <h1>
-        My Works
+        Some of My Works
       </h1>
       <p class="about">
         I selected some of my works for you.
