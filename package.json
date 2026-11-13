@@ -4,6 +4,9 @@
   "description": "Tirta Keniten's portfolios",
   "author": "Tirta Keniten",
   "private": true,
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",

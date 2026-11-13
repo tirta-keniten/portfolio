@@ -23,6 +23,10 @@ $ npm run lint
 $ npm run lint:style
 ```
 
+Nuxt 3 requires Node `^20.19.0 || >=22.12.0`. Deployment is configured in
+`netlify.toml`: Netlify builds with Node 20 (`npm run generate`) and publishes
+`.output/public`.
+
 For detailed explanation on how things work, check out the [Nuxt 3 docs](https://nuxt.com).
 
 ## Known `npm audit` findings
