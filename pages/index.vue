@@ -4,9 +4,7 @@
       <div class="who-i-am md:text-3xl xl:text-5xl">
         <span>I made </span><WhoIAm></WhoIAm>
       </div>
-      <h1>
-        Tirta Keniten
-      </h1>
+      <h1>Tirta Keniten</h1>
       <p class="about-location">
         Full-stack Web Developer
         <span class="whitespace-no-wrap">- Bali, Indonesia</span>.
@@ -51,13 +49,14 @@
         building things that solve problems.
       </p>
       <p>
-        Currently, I am working iHub Solutions International as Lead Developer Team.
-        My team build medium-large scale web applications, mobile apps, and marketing tools.
+        Currently, I am working iHub Solutions International as Lead Developer
+        Team. My team build medium-large scale web applications, mobile apps,
+        and marketing tools.
       </p>
       <p>
-        I was a web developer at Astadala Hospitality. Leverage
-        technology to optimize business flow, increase efiency, and generate
-        revenue by developing web-based applications.
+        I was a web developer at Astadala Hospitality. Leverage technology to
+        optimize business flow, increase efiency, and generate revenue by
+        developing web-based applications.
       </p>
       <p>
         In my spare time, I helps small businesses to get online, so they can
@@ -69,6 +68,22 @@
 
 <script>
 export default {
+  layout: 'default',
+
+  head() {
+    return {
+      title: 'Tirta Keniten - Bali Web Design & Developer',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            "I'm a web designer & developer from Bali, Indonesia. I leverage website to solved other people's problems. I use " +
+            this.skillListComma
+        }
+      ]
+    }
+  },
   computed: {
     skills() {
       const all = this.$store.state.skill.all
@@ -88,23 +103,6 @@ export default {
 
     identity() {
       return this.$store.state.identity.all
-    }
-  },
-
-  layout: 'default',
-
-  head() {
-    return {
-      title: 'Tirta Keniten - Bali Web Design & Developer',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            "I'm a web designer & developer from Bali, Indonesia. I leverage website to solved other people's problems. I use " +
-            this.skillListComma
-        }
-      ]
     }
   }
 }

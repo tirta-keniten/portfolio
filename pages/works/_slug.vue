@@ -38,17 +38,6 @@
 import { find } from 'lodash'
 
 export default {
-  computed: {
-    portfolio() {
-      const portfolios = this.$store.state.portfolio.all
-      const slug = this.$route.params.slug
-
-      return find(portfolios, (item) => {
-        return item.slug === slug
-      })
-    }
-  },
-
   head() {
     return {
       title:
@@ -60,6 +49,16 @@ export default {
           content: `${this.portfolio.goal} This app uses technology: ${this.portfolio.technology}.`
         }
       ]
+    }
+  },
+  computed: {
+    portfolio() {
+      const portfolios = this.$store.state.portfolio.all
+      const slug = this.$route.params.slug
+
+      return find(portfolios, (item) => {
+        return item.slug === slug
+      })
     }
   }
 }

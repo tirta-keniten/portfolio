@@ -22,8 +22,7 @@ export const state = () => {
         slug: 'astadala-webapp',
         technology:
           'Laravel, VueJS, Nuxt.js, MySQL, SASS, WebSocket, RESTful API',
-        goal:
-          'To provide product & service informations & bookings for customers who stay at Astadala Hospitality.',
+        goal: 'To provide product & service informations & bookings for customers who stay at Astadala Hospitality.',
         url: '',
         image: '/img-portfolio/astadala-webapp.png'
       },
@@ -32,8 +31,7 @@ export const state = () => {
         slug: 'omni-hotelier',
         technology:
           'Laravel, VueJS, React, Redux, MySQL, SASS, AWS, Forge, Redis, Docker, CloudFlare, RESTful API',
-        goal:
-          'To provide direct reservation system for hospitality industries.',
+        goal: 'To provide direct reservation system for hospitality industries.',
         url: 'https://omnihotelier.id/book/1',
         image: '/img-portfolio/omni-hotelier.png'
       },
@@ -41,8 +39,7 @@ export const state = () => {
         title: 'Lagoon Spa Seminyak',
         slug: 'lagoon-spa-seminyak-mobile',
         technology: 'Laravel, VueJS, MySQL, SASS, AWS',
-        goal:
-          'To provide mobile optimized web based reservation system for Lagoon Spa Seminyak.',
+        goal: 'To provide mobile optimized web based reservation system for Lagoon Spa Seminyak.',
         url: 'https://m.lagoonspaseminyak.com/',
         image: '/img-portfolio/lagoon-spa-seminyak.png'
       }

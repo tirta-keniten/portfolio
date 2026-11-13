@@ -1,12 +1,8 @@
 <template>
   <div class="container">
     <section class="hero">
-      <h1>
-        Some of My Works
-      </h1>
-      <p class="about">
-        I selected some of my works for you.
-      </p>
+      <h1>Some of My Works</h1>
+      <p class="about">I selected some of my works for you.</p>
     </section>
     <section class="section">
       <div
@@ -24,13 +20,6 @@
 
 <script>
 export default {
-  computed: {
-    portfolios() {
-      const all = this.$store.state.portfolio.all
-      return all
-    }
-  },
-
   layout: 'default',
 
   head() {
@@ -44,6 +33,12 @@ export default {
             'I selected some of my work in this show case. You can see the details, the goals, the tech that I sed to build the apps.'
         }
       ]
+    }
+  },
+  computed: {
+    portfolios() {
+      const all = this.$store.state.portfolio.all
+      return all
     }
   }
 }
