@@ -1,60 +1,37 @@
 <template>
-  <vue-typer
-    :text="identity"
-    :repeat="Infinity"
-    :shuffle="false"
-    initial-action="typing"
-    :pre-type-delay="70"
-    :type-delay="70"
-    :pre-erase-delay="3000"
-    :erase-delay="25"
-    erase-style="backspace"
-    :erase-on-complete="true"
-    caret-animation="smooth"
-  />
+  <span class="typewriter">{{ text }}<span class="caret" /></span>
 </template>
 
-<script>
-export default {
-  computed: {
-    identity() {
-      return this.$store.state.identity.all
-    }
-  }
-}
+<script setup>
+const identityStore = useIdentityStore()
+
+const { text } = useTyper(identityStore.all)
 </script>
 
 <style lang="scss">
-/* SCSS */
-.vue-typer {
-  /* Styles for the vue-typer container
+.typewriter {
+  /* Styles for the typewriter container
      e.g. font-family, font-size  */
   padding: 1rem;
   background-color: #000000;
+  color: #efefef;
 
-  .custom.char {
-    /* Styles for each character
-       e.g. color, background-color */
-    color: #efefef;
-
-    &.typed {
-      /* Styles specific to typed characters
-         i.e. characters to the left of the caret */
-      color: #efefef;
-    }
-    &.selected {
-      /* Styles specific to selected characters
-         i.e. characters to the right of the caret while VueTyper's
-              'eraseStyle' is set to a selection-based style */
-      background-color: #2e5a86;
-    }
-  }
-
-  .custom.caret {
+  .caret {
     /* Styles for the caret
        e.g. background-color, animation, display */
-    background-color: white;
+    display: inline-block;
     width: 0.25rem;
+    height: 1em;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+    background-color: white;
+    animation: typewriter-caret 1s step-end infinite;
+  }
+}
+
+@keyframes typewriter-caret {
+  50% {
+    opacity: 0;
   }
 }
 </style>

@@ -2,12 +2,12 @@
   <div class="container mx-auto">
     <section class="hero min-80vh text-left md:text-center">
       <div class="who-i-am md:text-3xl xl:text-5xl">
-        <span>I made </span><WhoIAm></WhoIAm>
+        <span>I made </span><WhoIAm />
       </div>
       <h1>Tirta Keniten</h1>
       <p class="about-location">
         Full-stack Web Developer
-        <span class="whitespace-no-wrap">- Bali, Indonesia</span>.
+        <span class="whitespace-nowrap">- Bali, Indonesia</span>.
       </p>
       <p class="md:hidden my-2 text-gray-700">
         I made {{ identity.join(', ') }}.
@@ -66,44 +66,24 @@
   </div>
 </template>
 
-<script>
-export default {
-  layout: 'default',
+<script setup>
+const skillStore = useSkillStore()
+const portfolioStore = usePortfolioStore()
+const identityStore = useIdentityStore()
 
-  head() {
-    return {
-      title: 'Tirta Keniten - Bali Web Design & Developer',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            "I'm a web designer & developer from Bali, Indonesia. I leverage website to solved other people's problems. I use " +
-            this.skillListComma
-        }
-      ]
+const skills = computed(() => skillStore.all)
+const portfolios = computed(() => portfolioStore.all)
+const identity = computed(() => identityStore.all)
+
+useHead(() => ({
+  title: 'Tirta Keniten - Bali Web Design & Developer',
+  meta: [
+    {
+      name: 'description',
+      content:
+        "I'm a web designer & developer from Bali, Indonesia. I leverage website to solved other people's problems. I use " +
+        skills.value.map((item) => item.name).join(', ')
     }
-  },
-  computed: {
-    skills() {
-      const all = this.$store.state.skill.all
-      return all
-    },
-
-    portfolios() {
-      const all = this.$store.state.portfolio.all
-      return all
-    },
-
-    skillListComma() {
-      const all = this.$store.state.skill.all
-      const skillsNames = all.map((item) => item.name)
-      return skillsNames.join(', ')
-    },
-
-    identity() {
-      return this.$store.state.identity.all
-    }
-  }
-}
+  ]
+}))
 </script>

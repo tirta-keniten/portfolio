@@ -18,28 +18,19 @@
   </div>
 </template>
 
-<script>
-export default {
-  layout: 'default',
+<script setup>
+const portfolioStore = usePortfolioStore()
 
-  head() {
-    return {
-      title: 'My Works - Tirta Keniten - Bali Web Design & Developer',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content:
-            'I selected some of my work in this show case. You can see the details, the goals, the tech that I sed to build the apps.'
-        }
-      ]
+const portfolios = computed(() => portfolioStore.all)
+
+useHead({
+  title: 'My Works - Tirta Keniten - Bali Web Design & Developer',
+  meta: [
+    {
+      name: 'description',
+      content:
+        'I selected some of my work in this show case. You can see the details, the goals, the tech that I sed to build the apps.'
     }
-  },
-  computed: {
-    portfolios() {
-      const all = this.$store.state.portfolio.all
-      return all
-    }
-  }
-}
+  ]
+})
 </script>

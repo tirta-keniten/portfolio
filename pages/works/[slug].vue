@@ -34,32 +34,21 @@
   </div>
 </template>
 
-<script>
-import { find } from 'lodash'
+<script setup>
+const route = useRoute()
+const portfolioStore = usePortfolioStore()
 
-export default {
-  head() {
-    return {
-      title:
-        this.portfolio.title + ' Tirta Keniten - Bali Web Design & Developer',
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: `${this.portfolio.goal} This app uses technology: ${this.portfolio.technology}.`
-        }
-      ]
-    }
-  },
-  computed: {
-    portfolio() {
-      const portfolios = this.$store.state.portfolio.all
-      const slug = this.$route.params.slug
+const portfolio = computed(() =>
+  portfolioStore.all.find((item) => item.slug === route.params.slug)
+)
 
-      return find(portfolios, (item) => {
-        return item.slug === slug
-      })
+useHead(() => ({
+  title: `${portfolio.value?.title} Tirta Keniten - Bali Web Design & Developer`,
+  meta: [
+    {
+      name: 'description',
+      content: `${portfolio.value?.goal} This app uses technology: ${portfolio.value?.technology}.`
     }
-  }
-}
+  ]
+}))
 </script>

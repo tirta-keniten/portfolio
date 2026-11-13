@@ -1,6 +1,8 @@
 <template>
   <div>
-    <nuxt class="wrapper" />
+    <div class="wrapper">
+      <slot />
+    </div>
     <div class="container mx-auto wrapper">
       <section class="container section">
         <h2>Contact</h2>
@@ -36,20 +38,12 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      myemail: 'keniten.tirta@gmail.com',
-      myphone: '+62 81 999 913171'
-    }
-  },
+<script setup>
+const myemail = 'keniten.tirta@gmail.com'
+const myphone = '+62 81 999 913171'
 
-  computed: {
-    whatsappLink() {
-      const number = this.myphone.replace(/\+* */g, '')
-      return `https://wa.me/${number}`
-    }
-  }
-}
+const whatsappLink = computed(() => {
+  const number = myphone.replace(/\+* */g, '')
+  return `https://wa.me/${number}`
+})
 </script>
