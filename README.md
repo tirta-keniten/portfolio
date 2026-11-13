@@ -15,7 +15,8 @@ $ npm run dev
 $ npm run build
 $ npm run start
 
-# generate the static site into .output/public
+# generate the static site (.output/public, or dist/ when Netlify's
+# NETLIFY environment is detected)
 $ npm run generate
 
 # lint JavaScript/Vue and SCSS
@@ -25,7 +26,8 @@ $ npm run lint:style
 
 Nuxt 3 requires Node `^20.19.0 || >=22.12.0`. Deployment is configured in
 `netlify.toml`: Netlify builds with Node 20 (`npm run generate`) and publishes
-`.output/public`.
+`dist` (Nitro's `netlify-static` output, which also emits `_headers` and
+`_redirects`).
 
 For detailed explanation on how things work, check out the [Nuxt 3 docs](https://nuxt.com).
 
